@@ -1,11 +1,12 @@
 <% content_for :title, "New tweet" %>
 
-<h1>New tweet</h1>
+<h1>Crear tweet</h1>
 
 <%= render "form", tweet: @tweet %>
 
 <br>
 
-<div>
-  <%= link_to "Back to tweets", tweets_path %>
+<div class="d-flex align-items-center">
+  <%= link_to   "Regresar", tweets_path, class: "p-2 mr-2 btn btn-light border", style:"width: 120px;" %>
 </div>
+

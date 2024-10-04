@@ -6,7 +6,9 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this tweet", @tweet %> |
-  <%= link_to "Back to tweets", tweets_path %>
+<div class="d-flex align-items-center">
+  <%= link_to   "Regresar", tweets_path, class: "p-2 mr-2 btn btn-light border", style:"width: 120px;" %>
+  <%= link_to   "Ver", @tweet, class: "p-2 mx-2 btn btn-success", style:"width: 120px;" %>
 </div>
+
+

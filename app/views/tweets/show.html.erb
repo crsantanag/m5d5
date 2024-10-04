@@ -1,10 +1,41 @@
-<p style="color: green"><%= notice %></p>
+<p class="mx-2 my-3"><span class="d-block p-2 text-bg-danger"> <%= notice %> </span></p>
 
-<%= render @tweet %>
+  <h1>Tweet a editar/eliminar</h1>
 
-<div>
-  <%= link_to "Edit this tweet", edit_tweet_path(@tweet) %> |
-  <%= link_to "Back to tweets", tweets_path %>
+  <div class="container text-left border">
+    <div class="row">
+      <div class="col-1">
+        Identificador
+      </div>
+      <div class="col-1">
+        <%= @tweet.id %>
+      </div>
 
-  <%= button_to "Destroy this tweet", @tweet, method: :delete %>
-</div>
+    </div>
+        <div class="row">
+      <div class="col-1">
+        Username
+      </div>
+      <div class="col-6">
+        <%= @tweet.username %>
+      </div>
+
+    </div>
+        <div class="row">
+      <div class="col-1">
+        Description
+      </div>
+      <div class="col-6">
+        <%= @tweet.description %>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <div class="d-flex align-items-center">
+    <%= link_to   "Regresar", tweets_path, class: "p-2 mr-2 btn btn-light border", style:"width: 120px;" %>
+    <%= link_to   "Editar", edit_tweet_path(@tweet), class: "p-2 mx-2 btn btn-success", style:"width: 120px;" %>
+    <%= button_to "Eliminar", @tweet, method: :delete, class: "p-2 mx-2 btn btn-danger", style:"width: 120px;"%>
+  </div>
+
+
